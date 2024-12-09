@@ -3,9 +3,13 @@ import { Homepage } from './components/Home.page';
 import { RQSuperHeroesPage } from './components/RQSuperHeroesPage';
 import { SuperHeroesPage } from './components/SuperHeroes.page';
 import './App.css';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
+
+const queryClient =  new QueryClient()
 function App() {
   return (
+<QueryClientProvider client={queryClient}>
     <Router>
       <div>
         <nav>
@@ -28,6 +32,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </QueryClientProvider>
   );
 }
 
