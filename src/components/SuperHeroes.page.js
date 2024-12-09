@@ -3,7 +3,6 @@ import { useEffect, useState } from "react"
 
 
 
-
 export const SuperHeroesPage = () => {
 
 const [isloading,setIsLoading] = useState(true)
